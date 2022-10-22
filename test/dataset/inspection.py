@@ -19,9 +19,9 @@ ds = Dataset(file='out_inspection//data.json', auto_write=True)
 
 # First row: show images
 with ds.viz.new_row() as row:
-    row.add_cell("image", variable="image0")
-    row.add_cell("image", variable="image1")
-    row.add_cell("flow",  variable="flow")
+    row.add_cell("image", var="image0")
+    row.add_cell("image", var="image1")
+    row.add_cell("flow",  var="flow")
 
 psep('ds:')
 print(ds.to_dict())
@@ -32,7 +32,7 @@ print()
 with ds.viz.new_row() as row:
     row.skip_cell()
     row.skip_cell()
-    row.add_cell("image", variable="occ")
+    row.add_cell("image", var="occ")
 
 psep('ds:')
 print(ds.to_dict())
